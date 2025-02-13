@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="newcssportfolio.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume">My Resume</a></li>
+                <li><a href="#certificate">My Certificates</a></li>
+                <li><a href="#video">Contact us</a></li>
+                <li><a href="#video">Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Front Page -->
+    <main>
+        <section class="front-page">
+            <div class="profile">
+                <img src="prof.jpg" alt="Your Profile Photo" class="profile-photo">
+                <div class="intro">
+                    <h1>Hi, I'm Sachchidanand. </h1>
+                    <p>Student of Bachlor of Technology.
+                        Specialisation in Computer science Engineering</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="content" id="about">
+            <h2>About Me</h2>
+            <p class="my">My name is Sachchidanand Yadav, and I am from Ghazipur.
+                I am currently pursuing a B.Tech in Computer Science and Engineering
+                at Hi-Tech Institute of Engineering and Technology, Ghaziabad.
+                I completed my 10+2 in 2021 and began my graduation in 2023.
+                During the gap between 2021 and 2023, I utilized my time to enhance my skills by completing additional
+                courses.
+                These courses helped me gain valuable knowledge and practical experience in various domains.
+                My academic journey reflects my dedication to learning and personal growth.
+                I aim to leverage my skills and education to achieve professional success.</p>
+        </section>
+
+        <!-- Certificates Section -->
+        <section class="content" id="certificate">
+            <h2>My Certificates</h2>
+            <p>Download my certificates:</p>
+            <div class="certificate">
+                <img src="certificate1.jpg" alt="Hackathon Certificate" class="image">
+                <a href="certificate1.jpg" download class="button">Hackathon Certificate</a>
+            </div>
+            <div class="certificate">
+                <img src="certificate2.jpg" alt="Debate Competition Certificate" class="image">
+                <a href="certificate2.jpg" download class="button">Debate Com.. Certificate</a>
+            </div>
+            <div class="certificate">
+                <img src="certificate3.jpg" alt="Cross Road Certificate" class="image">
+                <a href="certificate3.jpg" download class="button">Cross Road Certificate</a>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section class="content" id="resume">
+            <h2>My Resume</h2>
+            <div class="certificate">
+                <img src="resumphoto.jpg" alt="Cross Road Certificate" class="image">
+            </div>
+            <p>Download my resume:</p>
+            <a href="resumphoto.jpg" download class="button">Download Resume</a>
+        </section>
+        <!-- Contact usSection -->
+        <section class="contact-us">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <form action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile No:</label>
+                        <input type="number" id="mobile" name="mobile" required placeholder="Your Mobile Num...">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <!-- Videos Section -->
+        <section class="content" id="video">
+            <h2>Videos</h2>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                <p>Watch my latest video!</p>
+            </div>
+        </section>
+
+        <!-- Social Media Links -->
+        <section class="social-media">
+            <a href="https://www.linkedin.com" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com" target="_blank"><img src="github.png" alt="GitHub"></a>
+            <a href="https://twitter.com" target="_blank"><img src="x.png" alt="Twitter"></a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p> © created by sachchidanand.</p>
+    </footer>
+</body>
+
+</html>
