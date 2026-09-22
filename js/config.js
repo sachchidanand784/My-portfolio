@@ -9,8 +9,8 @@ const SITE_CONFIG = {
   github: "https://github.com/sachchidanand-yadav",
   location: "Greater Delhi Area, India",
 
-  // Supabase Configuration (Replace with your actual Supabase URL and Anon Key in Admin Panel or here)
-  supabaseUrl: localStorage.getItem("SY_SUPABASE_URL") || "",
+  // Supabase Configuration (Pre-configured Project URL)
+  supabaseUrl: localStorage.getItem("SY_SUPABASE_URL") || "https://asdbunodwknqonfcqscw.supabase.co",
   supabaseKey: localStorage.getItem("SY_SUPABASE_KEY") || "",
 
   // Fallback initial certificates dataset
