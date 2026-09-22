@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachchidanand Yadav | Machine Learning Intern & Data Analyst</title>
+  <meta name="description" content="Personal portfolio of Sachchidanand Yadav - Machine Learning Intern @ FlyRank AI, CSE Student specializing in Python, Data Analytics, Pandas, Seaborn, and AI development.">
+  <meta name="keywords" content="Sachchidanand Yadav, Machine Learning Intern, Data Analyst, FlyRank AI, Python Developer, Portfolio, CSE Student">
+  <meta name="author" content="Sachchidanand Yadav">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Sachchidanand Yadav | Machine Learning & Data Analytics Portfolio">
+  <meta property="og:description" content="Turning data into decisions, and ideas into working code. Machine Learning Intern @ FlyRank AI.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Supabase JS Client CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Particle Network Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Mouse Radial Glow Tracker -->
+  <div id="cursor-glow"></div>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-badge">SY</div>
+        <span>Sachchidanand</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="lucide-sun"></i>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="lucide-menu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="status-dot"></span> Open to ML & Data Opportunities
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Sachchidanand Yadav</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          <span id="typing-text" class="typing-text"></span>
+        </div>
+
+        <p class="hero-description">
+          Computer Science Engineering student passionate about <strong>Machine Learning</strong> and <strong>Data Analytics</strong>. Currently turning raw data into strategic insights as a <strong>Machine Learning Intern @ FlyRank AI</strong>. Experienced in Python, Pandas, Data Structures, and exploratory data analysis.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">
+            <i class="lucide-code-2"></i> View Projects
+          </a>
+          <a href="#" id="hero-resume-btn" class="btn btn-outline" target="_blank" download="Sachchidanand_Yadav_Resume.pdf">
+            <i class="lucide-file-text"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="lucide-mail"></i> Contact Me
+          </a>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <div class="hero-socials">
+            <a href="https://linkedin.com/in/784sachchidanandyadav" target="_blank" class="social-icon-btn" title="LinkedIn">
+              <i class="lucide-linkedin"></i>
+            </a>
+            <a href="mailto:snsachidanand784@gmail.com" class="social-icon-btn" title="Email">
+              <i class="lucide-mail"></i>
+            </a>
+            <a href="https://github.com/sachchidanand-yadav" target="_blank" class="social-icon-btn" title="GitHub">
+              <i class="lucide-github"></i>
+            </a>
+          </div>
+          <span id="resume-updated-date" style="font-size: 0.8rem; color: var(--text-dim); border-left: 2px solid var(--border-glass); padding-left: 1rem;">
+            Last updated: Loading...
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="avatar-wrapper">
+          <div class="avatar-inner">
+            <div class="avatar-img-placeholder">
+              <i class="lucide-brain-circuit"></i>
+              <span style="font-size: 1rem; font-weight: 700; margin-top: 0.5rem; color: var(--text-main);">AI / ML Focused</span>
+            </div>
+          </div>
+        </div>
+        <div class="avatar-badge-tag float-anim">
+          <i class="lucide-zap" style="color:var(--accent-blue);"></i>
+          <span>FlyRank AI Intern</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT ME SECTION -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-user"></i> Introduction</div>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A glimpse into my background, passions, and continuous learning journey.</p>
+      </div>
+
+      <div class="glass-card reveal reveal-delay-1" style="max-width: 900px; margin: 0 auto;">
+        <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+          I am a 3rd-year <strong>Computer Science & Engineering student</strong> based in the Greater Delhi Area. My fascination lies at the intersection of data, intelligent algorithms, and real-world problem-solving. Over the past few years, I have built a solid foundation in core programming concepts (C, Data Structures, HTML/CSS/JavaScript) while dedicating my main focus toward <strong>Python and Machine Learning</strong>.
+        </p>
+        <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+          Whether analyzing complex market datasets or building exploratory predictive models, I thrive on turning messy data into actionable decisions. I believe in continuous growth, hands-on experimentation, and writing clean, efficient code.
+        </p>
+
+        <div style="border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
+          <h4 style="font-size: 1rem; color: var(--text-main); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="lucide-sparkles" style="color: var(--accent-blue);"></i> Currently Exploring & Learning:
+          </h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+            <span class="tech-chip"><i class="lucide-cpu"></i> Generative AI & LLMs</span>
+            <span class="tech-chip"><i class="lucide-code"></i> Advanced Python Ecosystem</span>
+            <span class="tech-chip"><i class="lucide-bar-chart-3"></i> Predictive Analytics</span>
+            <span class="tech-chip"><i class="lucide-network"></i> Neural Networks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SKILLS SECTION -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-layers"></i> Technical Proficiency</div>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">Qualitative mastery levels across core development, data science, and hardware prototyping tools.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="glass-card skill-category-card reveal reveal-delay-1">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="lucide-code-2"></i></div>
+            <h3 style="font-size: 1.2rem;">Programming</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Python</span>
+                <span class="skill-level-tag level-comfortable">Comfortable</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>C Language & Data Structures</span>
+                <span class="skill-level-tag level-comfortable">Comfortable</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>HTML5 / CSS3 / JavaScript</span>
+                <span class="skill-level-tag level-working">Working Knowledge</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & ML Tools -->
+        <div class="glass-card skill-category-card reveal reveal-delay-2">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="lucide-database"></i></div>
+            <h3 style="font-size: 1.2rem;">Data & ML Tools</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Pandas & Data Wrangling</span>
+                <span class="skill-level-tag level-comfortable">Comfortable</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>NumPy & Mathematical Computing</span>
+                <span class="skill-level-tag level-working">Working Knowledge</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Matplotlib & Seaborn</span>
+                <span class="skill-level-tag level-comfortable">Comfortable</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Basic ML Algorithms & Regression</span>
+                <span class="skill-level-tag level-learning">Learning</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prototyping Tools -->
+        <div class="glass-card skill-category-card reveal reveal-delay-3">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="lucide-hammer"></i></div>
+            <h3 style="font-size: 1.2rem;">Prototyping & Design</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Tinkercad & Arduino Prototyping</span>
+                <span class="skill-level-tag level-working">Working Knowledge</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="78%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Computer-Aided Design (CAD Basics)</span>
+                <span class="skill-level-tag level-working">Working Knowledge</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Figma UI/UX Design</span>
+                <span class="skill-level-tag level-working">Working Knowledge</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-level="72%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. EXPERIENCE TIMELINE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-briefcase"></i> Career Journey</div>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Practical hands-on internship experience in machine learning, data analysis, and rapid prototyping.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">June 2026 – Present</span>
+            <h3 class="timeline-role">Machine Learning Intern</h3>
+            <div class="timeline-org">FlyRank AI • Ghaziabad, Uttar Pradesh</div>
+            <ul class="timeline-bullets">
+              <li>Assisting in building and tuning predictive machine learning workflows for automated intelligence.</li>
+              <li>Preprocessing, cleaning, and structuring large datasets using Python, Pandas, and Scikit-Learn.</li>
+              <li>Collaborating with senior engineers to evaluate model accuracy metrics and feature importance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">Sept 2025 – Oct 2025</span>
+            <h3 class="timeline-role">Data Analyst Intern</h3>
+            <div class="timeline-org">AICTE (All India Council for Technical Education) • New Delhi</div>
+            <ul class="timeline-bullets">
+              <li>Performed data extraction, wrangling, and exploratory analysis on educational metrics and institutional datasets.</li>
+              <li>Engineered interactive visual dashboards using Matplotlib and Seaborn to highlight enrollment and performance trends.</li>
+              <li>Presented empirical summaries to key stakeholders to assist in policy visualization and data-driven insights.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">Aug 2025 – Sept 2025</span>
+            <h3 class="timeline-role">Rapid Prototyping & Design Thinking Intern</h3>
+            <div class="timeline-org">ERA Foundation India (Project Kalam Pragati) • Lucknow</div>
+            <ul class="timeline-bullets">
+              <li>Engaged in hands-on hardware/software prototyping using Tinkercad and microcontroller circuits.</li>
+              <li>Applied design-thinking methodology to iteratively build functional solutions for social engineering challenges.</li>
+              <li>Documented structural schematics and presented working models during institutional innovation showcases.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-folder-git-2"></i> Showcase</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Analytical investigations and data-driven projects demonstrating practical data analytics & ML skills.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card reveal">
+          <div>
+            <div style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+              Data Analytics & EDA
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Airbnb Hotel Booking Analysis</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              An extensive exploratory data analysis on Airbnb booking patterns, seasonal price fluctuations, guest cancellation ratios, and customer preference metrics using Python and Pandas.
+            </p>
+            <div class="project-tag-wrap">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Pandas</span>
+              <span class="tech-chip">NumPy</span>
+              <span class="tech-chip">Data Wrangling</span>
+            </div>
+          </div>
+          <a href="https://github.com/sachchidanand-yadav" target="_blank" class="project-link-btn">
+            View Details & Code <i class="lucide-arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card reveal reveal-delay-1">
+          <div>
+            <div style="font-size: 0.8rem; color: var(--accent-purple); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+              Data Visualization
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Netflix Content & Viewing Trends Analysis</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Deep-dive visual analysis into Netflix catalog distributions, genre popularity evolution over years, age ratings, and global content acquisition strategy using Matplotlib & Seaborn.
+            </p>
+            <div class="project-tag-wrap">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Matplotlib</span>
+              <span class="tech-chip">Seaborn</span>
+              <span class="tech-chip">EDA</span>
+            </div>
+          </div>
+          <a href="https://github.com/sachchidanand-yadav" target="_blank" class="project-link-btn">
+            View Details & Code <i class="lucide-arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Project 3 (AI Coming Soon) -->
+        <div class="glass-card project-card reveal reveal-delay-2" style="border: 1px dashed var(--border-glow); background: rgba(127, 0, 255, 0.04);">
+          <div>
+            <div style="font-size: 0.8rem; color: var(--accent-teal); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 4px;">
+              <span class="status-dot"></span> In Active Development
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-main);">AI-Powered Predictive Analytics Tool</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              An upcoming end-to-end Machine Learning web application featuring automated data preprocessing, model selection, and real-time prediction output.
+            </p>
+            <div class="project-tag-wrap">
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">Machine Learning</span>
+            </div>
+          </div>
+          <span style="font-size: 0.85rem; color: var(--text-dim); font-style: italic;">
+            🚀 Coming Soon • Growth Direction
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CERTIFICATIONS SECTION (Dynamic UI) -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-award"></i> Verified Knowledge</div>
+        <h2 class="section-title">Certifications & Awards</h2>
+        <p class="section-subtitle">Continuous skill verification from leading tech platforms and academic competitions.</p>
+      </div>
+
+      <!-- Dynamic Rendering Container -->
+      <div class="cert-grid reveal" id="certifications-container">
+        <!-- Rendered dynamically by js/dynamic-data.js -->
+        <div style="text-align: center; grid-column: 1 / -1; padding: 2rem; color: var(--text-muted);">
+          <i class="lucide-loader-2 animate-spin" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
+          <p style="margin-top: 0.5rem;">Loading certificates from live backend...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. EDUCATION TIMELINE -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-graduation-cap"></i> Academic Background</div>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic foundations in Computer Science Engineering and technical diplomas.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Education 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2023 – 2027 (Expected)</span>
+            <h3 class="timeline-role">B.Tech in Computer Science Engineering</h3>
+            <div class="timeline-org">Hi-Tech Institute of Engineering & Technology • Greater Noida / Ghaziabad</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+              Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Operating Systems, Database Management Systems, Machine Learning Basics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 2 -->
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2022 – 2023</span>
+            <h3 class="timeline-role">O-Level Diploma in Computer Concepts</h3>
+            <div class="timeline-org">NIELIT (National Institute of Electronics & Information Technology)</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+              Certified training in IT tools, network fundamentals, programming concepts, and web design basics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 3 -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2019 – 2021</span>
+            <h3 class="timeline-role">Intermediate (12th Grade - Mathematics Stream)</h3>
+            <div class="timeline-org">UPMSP (Uttar Pradesh State Board)</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+              Strong quantitative focus in Physics, Chemistry, and Higher Mathematics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 4 -->
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2018 – 2019</span>
+            <h3 class="timeline-role">High School (10th Grade)</h3>
+            <div class="timeline-org">UPMSP (Uttar Pradesh State Board)</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+              Completed high school with distinction in Mathematics and Science.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACT SECTION -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <div class="section-tag"><i class="lucide-send"></i> Get In Touch</div>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Whether you have an opportunity, project collaboration, or question, feel free to reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card reveal">
+          <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Contact Information</h3>
+
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="social-icon-btn" style="color: var(--accent-blue);">
+                <i class="lucide-mail"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-dim);">Direct Email</div>
+                <a href="mailto:snsachidanand784@gmail.com" style="font-weight: 600; color: var(--text-main);">snsachidanand784@gmail.com</a>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="social-icon-btn" style="color: var(--accent-cyan);">
+                <i class="lucide-linkedin"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-dim);">LinkedIn Profile</div>
+                <a href="https://linkedin.com/in/784sachchidanandyadav" target="_blank" style="font-weight: 600; color: var(--text-main);">linkedin.com/in/784sachchidanandyadav</a>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div class="social-icon-btn" style="color: var(--accent-purple);">
+                <i class="lucide-map-pin"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-dim);">Location</div>
+                <div style="font-weight: 600; color: var(--text-main);">Greater Delhi Area, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card reveal reveal-delay-1">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. rahul@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Write your message or inquiry here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="lucide-send"></i> Send Message
+            </button>
+
+            <div id="form-status" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER -->
+  <footer class="footer">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <div style="display: flex; gap: 1rem;">
+        <a href="https://linkedin.com/in/784sachchidanandyadav" target="_blank" class="social-icon-btn"><i class="lucide-linkedin"></i></a>
+        <a href="mailto:snsachidanand784@gmail.com" class="social-icon-btn"><i class="lucide-mail"></i></a>
+        <a href="https://github.com/sachchidanand-yadav" target="_blank" class="social-icon-btn"><i class="lucide-github"></i></a>
+      </div>
+      <div>
+        © 2026 Sachchidanand Yadav • Built with curiosity & code
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/dynamic-data.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
